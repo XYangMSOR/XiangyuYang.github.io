@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Xiangyu Yang | Shandong University</title>
+  <meta
+    name="description"
+    content="Academic homepage of Xiangyu Yang, Shandong University. Research interests include Monte Carlo simulation, stochastic optimization, data-driven analytics, and healthcare."
+  />
+
+  <style>
+    :root {
+      --page-width: 1120px;
+      --text: #111111;
+      --muted: #555555;
+      --line: #cfcfcf;
+      --link: #0000ee;
+      --soft-bg: #f7f7f7;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      line-height: 1.55;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    a:hover {
+      color: #d00000;
+    }
+
+    .page {
+      width: min(var(--page-width), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 60px;
+    }
+
+    .top {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+      gap: 48px;
+      align-items: center;
+      padding-bottom: 20px;
+    }
+
+    .name {
+      margin: 0 0 28px;
+      font-size: clamp(42px, 6vw, 64px);
+      line-height: 1.05;
+      letter-spacing: -1.5px;
+    }
+
+    .contact {
+      margin: 0;
+      font-size: 21px;
+      line-height: 1.55;
+    }
+
+    .contact .spacer {
+      display: block;
+      height: 18px;
+    }
+
+    .profile-wrap {
+      width: 100%;
+      max-width: 430px;
+      justify-self: end;
+    }
+
+    .profile-photo {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 4.35;
+      object-fit: cover;
+      border: 1px solid #dddddd;
+      background: var(--soft-bg);
+    }
+
+    .photo-placeholder {
+      display: none;
+      width: 100%;
+      aspect-ratio: 4 / 4.35;
+      place-items: center;
+      border: 1px solid #dddddd;
+      background: var(--soft-bg);
+      color: #777777;
+      font-size: 72px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .quick-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      margin-top: 18px;
+      font-size: 16px;
+    }
+
+    section {
+      border-top: 1px solid var(--line);
+      padding: 30px 0 24px;
+    }
+
+    h2 {
+      margin: 0 0 20px;
+      font-size: 31px;
+      line-height: 1.25;
+    }
+
+    h3 {
+      margin: 24px 0 12px;
+      font-size: 23px;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 8px 0;
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding-left: 38px;
+    }
+
+    li {
+      margin: 7px 0;
+    }
+
+    .compact li {
+      margin: 3px 0;
+    }
+
+    .item {
+      margin-bottom: 22px;
+    }
+
+    .item:last-child {
+      margin-bottom: 0;
+    }
+
+    .item-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: baseline;
+      font-weight: 700;
+    }
+
+    .date {
+      flex: 0 0 auto;
+      white-space: nowrap;
+      font-weight: 400;
+      color: var(--muted);
+    }
+
+    .subline {
+      margin-top: 2px;
+      color: #222222;
+    }
+
+    .publication-list {
+      padding-left: 28px;
+    }
+
+    .publication-list li {
+      margin-bottom: 12px;
+      padding-left: 4px;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .grant-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+    }
+
+    .grant-table th,
+    .grant-table td {
+      padding: 10px 8px;
+      border-bottom: 1px solid #e3e3e3;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .grant-table th {
+      font-size: 16px;
+      color: var(--muted);
+    }
+
+    .footer {
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    @media (max-width: 820px) {
+      body {
+        font-size: 17px;
+      }
+
+      .page {
+        width: min(100% - 24px, var(--page-width));
+        padding-top: 18px;
+      }
+
+      .top {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .profile-wrap {
+        max-width: 360px;
+        justify-self: start;
+        grid-row: 1;
+      }
+
+      .name {
+        margin-bottom: 20px;
+      }
+
+      .contact {
+        font-size: 18px;
+      }
+
+      .item-head {
+        display: block;
+      }
+
+      .date {
+        display: block;
+        margin-top: 2px;
+      }
+
+      .grant-table,
+      .grant-table tbody,
+      .grant-table tr,
+      .grant-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .grant-table thead {
+        display: none;
+      }
+
+      .grant-table tr {
+        border-bottom: 1px solid #e3e3e3;
+        padding: 8px 0;
+      }
+
+      .grant-table td {
+        border: 0;
+        padding: 3px 0;
+      }
+    }
+
+    @media print {
+      .page {
+        width: 100%;
+      }
+
+      a {
+        color: #000000;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <!--
+      使用说明：
+      1. 把你的个人照片命名为 profile.jpg，并与 index.html 放在同一目录。
+      2. 把个人简历命名为 CV.pdf，并与 index.html 放在同一目录。
+      3. Google Scholar 链接目前是搜索页；拿到个人主页链接后可直接替换。
+    -->
+
+    <header class="top">
+      <div>
+        <h1 class="name">
+          Xiangyu Yang <span lang="zh-CN">(杨翔宇)</span>
+        </h1>
+
+        <p class="contact">
+          Tenure-Track Associate Researcher<br />
+          School of Management<br />
+          Shandong University<br />
+          Room 609, Block B, Zhixin Building<br />
+          27 Shanda Nanlu, Jinan, Shandong 250100, China
+
+          <span class="spacer"></span>
+
+          <a href="mailto:yxy@email.sdu.edu.cn">
+            yxy@email.sdu.edu.cn
+          </a>
+        </p>
+
+        <nav class="quick-links" aria-label="Academic profiles">
+          <a href="CV.pdf" target="_blank" rel="noopener">
+            CV
+          </a>
+
+          <a
+            href="https://scholar.google.com/scholar?q=%22Xiangyu+Yang%22+%22Shandong+University%22"
+            target="_blank"
+            rel="noopener"
+          >
+            Google Scholar
+          </a>
+
+          <a
+            href="https://orcid.org/0000-0002-7825-3310"
+            target="_blank"
+            rel="noopener"
+          >
+            ORCID
+          </a>
+
+          <a
+            href="https://www.scopus.com/authid/detail.uri?authorId=57217136925"
+            target="_blank"
+            rel="noopener"
+          >
+            Scopus
+          </a>
+
+          <a
+            href="https://www.webofscience.com/wos/author/record/NTQ-9041-2025"
+            target="_blank"
+            rel="noopener"
+          >
+            Web of Science
+          </a>
+        </nav>
+      </div>
+
+      <div class="profile-wrap">
+        <img
+          class="profile-photo"
+          src="profile.jpg"
+          alt="Portrait of Xiangyu Yang"
+          onerror="
+            this.style.display='none';
+            document.getElementById('photo-fallback').style.display='grid';
+          "
+        />
+
+        <div
+          id="photo-fallback"
+          class="photo-placeholder"
+          aria-label="Photo placeholder"
+        >
+          XY
+        </div>
+      </div>
+    </header>
+
+    <section id="research">
+      <h2>Research Interests</h2>
+
+      <ul>
+        <li>Monte Carlo simulation</li>
+        <li>Stochastic optimization</li>
+        <li>Data-driven analytics</li>
+        <li>Healthcare</li>
+      </ul>
+    </section>
+
+    <section id="positions">
+      <h2>Academic Positions</h2>
+
+      <div class="item">
+        <div class="item-head">
+          <span>Shandong University, School of Management</span>
+          <span class="date">Jun 2022 – Present</span>
+        </div>
+
+        <ul class="compact">
+          <li>
+            <strong>Tenure-Track Associate Researcher</strong>,
+            Nov 2025 – Present
+          </li>
+
+          <li>
+            <strong>Special-Funded Postdoctoral Researcher</strong>,
+            Jun 2022 – Nov 2025<br />
+            Advisor: Jianghua Zhang
+          </li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-head">
+          <span>
+            Stony Brook University, Department of Applied Mathematics
+            &amp; Statistics
+          </span>
+
+          <span class="date">Feb 2024 – Aug 2024</span>
+        </div>
+
+        <p class="subline">
+          Visiting Scholar · Advisor: Jiaqiao Hu
+        </p>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+
+      <div class="item">
+        <div class="item-head">
+          <span>
+            Ph.D., Management Science &amp; Engineering,
+            Fudan University
+          </span>
+
+          <span class="date">Sep 2017 – Jun 2022</span>
+        </div>
+
+        <p class="subline">
+          School of Management · Advisor: Jian-Qiang Hu
+        </p>
+      </div>
+
+      <div class="item">
+        <div class="item-head">
+          <span>
+            Bachelor, Engineering Management,
+            Shandong University
+          </span>
+
+          <span class="date">Sep 2013 – Jun 2017</span>
+        </div>
+
+        <p class="subline">
+          School of Management · Minor in Financial Mathematics
+          &amp; Financial Engineering
+        </p>
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      <p class="note">* Corresponding author</p>
+
+      <h3>Journal Articles</h3>
+
+      <ol class="publication-list">
+        <li>
+          Feng Xu, Jian-Qiang Hu, and
+          <strong>Xiangyu Yang*</strong>.
+          “Surrogate-Free Annealing Random Search for Continuous
+          Stochastic Optimization.”
+          <em>Naval Research Logistics</em>, accepted, 2026.
+        </li>
+
+        <li>
+          Hao Cao, Jian-Qiang Hu*, Teng Lian, and
+          <strong>Xiangyu Yang</strong>.
+          “Infinitesimal Perturbation Analysis (IPA) Derivative
+          Estimation with Unknown Parameters.”
+          <em>Automatica</em>, 174, 112140, 2025.
+        </li>
+
+        <li>
+          <strong>Xiangyu Yang</strong>, Jianghua Zhang*,
+          Jian-Qiang Hu, and Jiaqiao Hu*.
+          “Nonparametric Multi-Product Dynamic Pricing with Demand
+          Learning via Simultaneous Price Perturbation.”
+          <em>European Journal of Operational Research</em>,
+          319(1), 191–205, 2024.
+        </li>
+
+        <li>
+          <strong>Xiangyu Yang</strong>, Jiaqiao Hu, and
+          Jian-Qiang Hu*.
+          “Relative Q-learning for Average-Reward Markov Decision
+          Processes with Continuous States.”
+          <em>IEEE Transactions on Automatic Control</em>,
+          69(10), 6546–6560, 2024.
+        </li>
+
+        <li>
+          Jiaqiao Hu, <strong>Xiangyu Yang*</strong>,
+          Jian-Qiang Hu, and Yijie Peng.
+          “A Q-learning Algorithm for Markov Decision Processes
+          with Continuous State Spaces.”
+          <em>Systems &amp; Control Letters</em>,
+          187, 105782, 2024.
+        </li>
+
+        <li>
+          Yanfeng Wu, Jian-Qiang Hu, and
+          <strong>Xiangyu Yang*</strong>.
+          “Moment Estimators for Parameters of Lévy-driven
+          Ornstein-Uhlenbeck Processes.”
+          <em>Journal of Time Series Analysis</em>,
+          43(4), 610–639, 2022.
+        </li>
+
+        <li>
+          <strong>Xiangyu Yang*</strong>, Yanfeng Wu,
+          Zeyu Zheng, and Jian-Qiang Hu.
+          “Method of Moments Estimation for Lévy-driven
+          Ornstein-Uhlenbeck Stochastic Volatility Models.”
+          <em>
+            Probability in the Engineering and Informational Sciences
+          </em>,
+          35(4), 975–1004, 2021.
+        </li>
+
+        <li lang="zh-CN">
+          吴燕丰，<strong>杨翔宇*</strong>，胡建强。
+          “仿射随机波动率模型的矩估计方法。”
+          《系统工程理论与实践》，录用，2025。
+        </li>
+      </ol>
+
+      <h3>Conference Proceedings</h3>
+
+      <ol class="publication-list">
+        <li>
+          <strong>Xiangyu Yang</strong>, Jian-Qiang Hu,
+          Jiaqiao Hu, and Yijie Peng.
+          “Asynchronous Value Iteration for Markov Decision Processes
+          with Continuous State Spaces.”
+          <em>
+            Proceedings of the 2020 Winter Simulation Conference
+          </em>,
+          Orlando, USA, 2856–2866, 2020.
+        </li>
+      </ol>
+    </section>
+
+    <section id="preprints">
+      <h2>Preprints &amp; Working Papers</h2>
+
+      <ul>
+        <li>
+          <strong>
+            Nonparametric Learning and Earning with One-Point Feedback
+            under Nonstationarity.
+          </strong>
+          Joint work with Feng Xu, Jian-Qiang Hu, and Jiaqiao Hu.
+          Submitted to <em>INFORMS Journal on Computing</em>.
+        </li>
+
+        <li>
+          <strong>
+            Steady-State Quantile Optimization for Controlled
+            Markovian Systems.
+          </strong>
+          Joint work with Teng Lian and Jian-Qiang Hu.
+          Under review at <em>INFORMS Journal on Computing</em>.
+        </li>
+
+        <li>
+          <strong>
+            Two-Timescale Stochastic Approximation for Smooth and
+            Strongly-Convex-Strongly-Concave Stochastic Minimax
+            Optimization: A New Convergence Rate.
+          </strong>
+          Sole author. Major revision at
+          <em>Operations Research Letters</em>.
+        </li>
+
+        <li>
+          <strong>
+            A Penalty-Based Exterior-Interior Point Method for
+            Stochastically Constrained Simulation Optimization.
+          </strong>
+          Joint work with Jiaqiao Hu and Jianghua Zhang.
+          Under review at <em>Operations Research</em>.
+        </li>
+
+        <li>
+          <strong>
+            Optimizing Emergency Evacuation with Social Distancing
+            under Compound Disasters: A Multi-Alternative
+            Optimization Framework.
+          </strong>
+          Joint work with Jianghua Zhang, Hongwei Shi,
+          and Zizhuo Wang.
+          Major revision at
+          <em>
+            Transportation Research Part E:
+            Logistics and Transportation Review
+          </em>.
+
+          <br />
+
+          <span class="note">
+            Best Paper Award (3rd Prize), 20th International Conference
+            on Services Systems &amp; Services Management.
+          </span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="grants">
+      <h2>
+        Research Grants
+        <span class="note">(as Principal Investigator)</span>
+      </h2>
+
+      <table class="grant-table">
+        <thead>
+          <tr>
+            <th>Project</th>
+            <th>Amount</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>
+              National Natural Science Foundation of China,
+              Young Scientists Fund
+            </td>
+            <td>¥300,000</td>
+            <td>Ongoing</td>
+          </tr>
+
+          <tr>
+            <td>
+              China Postdoctoral Science Foundation,
+              General Fund
+            </td>
+            <td>¥50,000</td>
+            <td>Completed</td>
+          </tr>
+
+          <tr>
+            <td>
+              Shandong Provincial Natural Science Foundation,
+              Young Scientists Fund
+            </td>
+            <td>¥150,000</td>
+            <td>Ongoing</td>
+          </tr>
+
+          <tr>
+            <td>
+              Shandong Postdoctoral Science Foundation,
+              Innovation Fund (Social Sciences)
+            </td>
+            <td>¥30,000</td>
+            <td>Completed</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="teaching">
+      <h2>Teaching</h2>
+
+      <h3>Undergraduate-Level Courses</h3>
+
+      <ul>
+        <li>
+          Linear Algebra (线性代数), Spring 2026
+        </li>
+
+        <li>
+          Frontiers of Supply Chain Management
+          (供应链管理前沿), Spring 2026
+        </li>
+      </ul>
+
+      <h3>Graduate-Level Courses</h3>
+
+      <ul>
+        <li>
+          System Modeling and Simulation (系统建模与仿真),
+          Spring 2023, 2025, and 2026
+        </li>
+
+        <li>
+          Data and Decision-Making Methods (数据与决策方法专题),
+          Fall 2022, 2023, 2024, and 2025
+        </li>
+      </ul>
+    </section>
+
+    <section id="service">
+      <h2>Service &amp; Honors</h2>
+
+      <h3>Service</h3>
+
+      <ul>
+        <li>
+          Session Chair, 2025 INFORMS International Meeting
+        </li>
+
+        <li>
+          Reviewer:
+          <em>Journal of Simulation</em>,
+          American Control Conference (ACC),
+          and Winter Simulation Conference (WSC)
+        </li>
+      </ul>
+
+      <h3>Honors</h3>
+
+      <ul>
+        <li>
+          First Prize for Outstanding Postdoc of Shandong University
+          (10 awardees annually)
+        </li>
+
+        <li>
+          Outstanding Graduate of Fudan University
+        </li>
+
+        <li>
+          Outstanding Teaching Assistant of Fudan University
+        </li>
+      </ul>
+    </section>
+
+    <section id="miscellaneous">
+      <h2>Miscellaneous</h2>
+
+      <ul>
+        <li>
+          Programming &amp; Software:
+          Python, R, MATLAB, LaTeX
+        </li>
+
+        <li>Mathematics Genealogy</li>
+        <li>Erdős Number: 4</li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      Last updated: July 2026
+    </footer>
+  </main>
+</body>
+</html>
