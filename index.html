@@ -126,6 +126,31 @@
       line-height: 1.25;
     }
 
+    /*
+      Section titles and classical Chinese quotations
+    */
+    .section-title {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 6px 18px;
+    }
+
+    .section-quote {
+      font-family:
+        "Kaiti SC",
+        "STKaiti",
+        "KaiTi",
+        "Songti SC",
+        "STSong",
+        serif;
+      font-size: 0.58em;
+      font-weight: 400;
+      color: #666666;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+
     h3 {
       margin: 24px 0 12px;
       font-size: 23px;
@@ -247,6 +272,20 @@
         font-size: 18px;
       }
 
+      /*
+        On smaller screens, put the quotation
+        underneath the English section title.
+      */
+      .section-title {
+        display: block;
+      }
+
+      .section-quote {
+        display: block;
+        margin-top: 5px;
+        white-space: normal;
+      }
+
       .item-head {
         display: block;
       }
@@ -293,6 +332,7 @@
 
 <body>
   <main class="page">
+
     <!--
       使用说明：
       1. 把个人照片命名为 profile.jpg，并与 index.html 放在同一目录。
@@ -314,14 +354,17 @@
 
           <span class="spacer"></span>
 
-<span>
-  yxy [at] email [dot] sdu [dot] edu [dot] cn
-</span>
-
+          <span>
+            yxy [at] email [dot] sdu [dot] edu [dot] cn
+          </span>
         </p>
 
         <nav class="quick-links" aria-label="Academic profiles">
-          <a href="CV.pdf" target="_blank" rel="noopener">
+          <a
+            href="CV.pdf"
+            target="_blank"
+            rel="noopener"
+          >
             CV
           </a>
 
@@ -380,8 +423,16 @@
       </div>
     </header>
 
+
+    <!-- Research Interests -->
+
     <section id="research">
-      <h2>Research Interests</h2>
+      <h2 class="section-title">
+        <span>Research Interests</span>
+        <span class="section-quote" lang="zh-CN">
+          路漫漫其修远兮，吾将上下而求索
+        </span>
+      </h2>
 
       <ul>
         <li>Monte Carlo simulation</li>
@@ -391,8 +442,16 @@
       </ul>
     </section>
 
+
+    <!-- Academic Positions -->
+
     <section id="positions">
-      <h2>Academic Positions</h2>
+      <h2 class="section-title">
+        <span>Academic Positions</span>
+        <span class="section-quote" lang="zh-CN">
+          行到水穷处，坐看云起时
+        </span>
+      </h2>
 
       <div class="item">
         <div class="item-head">
@@ -410,10 +469,13 @@
             <strong>Special-Funded Postdoctoral Researcher</strong>,
             Jun 2022 – Nov 2025<br />
             Advisor:
-<a href="https://www.glxy.sdu.edu.cn/info/1048/3487.htm" target="_blank" rel="noopener noreferrer">
-  Jianghua Zhang
-</a>
-
+            <a
+              href="https://www.glxy.sdu.edu.cn/info/1048/3487.htm"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Jianghua Zhang
+            </a>
           </li>
         </ul>
       </div>
@@ -430,16 +492,27 @@
 
         <p class="subline">
           Visiting Scholar · Advisor:
-<a href="https://www.stonybrook.edu/ams/faculty/faculty-profiles/jiaqiao-hu.html" target="_blank" rel="noopener noreferrer">
-  Jiaqiao Hu
-</a>
-
+          <a
+            href="https://www.stonybrook.edu/ams/faculty/faculty-profiles/jiaqiao-hu.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Jiaqiao Hu
+          </a>
         </p>
       </div>
     </section>
 
+
+    <!-- Education -->
+
     <section id="education">
-      <h2>Education</h2>
+      <h2 class="section-title">
+        <span>Education</span>
+        <span class="section-quote" lang="zh-CN">
+          博观而约取，厚积而薄发
+        </span>
+      </h2>
 
       <div class="item">
         <div class="item-head">
@@ -453,10 +526,13 @@
 
         <p class="subline">
           School of Management · Advisor:
-<a href="https://www.fdsm.fudan.edu.cn/AboutUs/preview.html?uid=012066" target="_blank" rel="noopener noreferrer">
-  Jian-Qiang Hu
-</a>
-
+          <a
+            href="https://www.fdsm.fudan.edu.cn/AboutUs/preview.html?uid=012066"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Jian-Qiang Hu
+          </a>
         </p>
       </div>
 
@@ -477,8 +553,17 @@
       </div>
     </section>
 
+
+    <!-- Publications -->
+
     <section id="publications">
-      <h2>Publications</h2>
+      <h2 class="section-title">
+        <span>Publications</span>
+        <span class="section-quote" lang="zh-CN">
+          文章千古事，得失寸心知
+        </span>
+      </h2>
+
       <p class="note">* Corresponding author</p>
 
       <h3>Journal Articles</h3>
@@ -489,7 +574,7 @@
           <strong>Xiangyu Yang*</strong>.
           “Surrogate-Free Annealing Random Search for Continuous
           Stochastic Optimization.”
-          <em>Naval Research Logistics</em>, 
+          <em>Naval Research Logistics</em>,
           73(6), 953-968, 2026.
         </li>
 
@@ -571,8 +656,16 @@
       </ol>
     </section>
 
+
+    <!-- Preprints -->
+
     <section id="preprints">
-      <h2>Preprints</h2>
+      <h2 class="section-title">
+        <span>Preprints</span>
+        <span class="section-quote" lang="zh-CN">
+          新诗改罢自长吟
+        </span>
+      </h2>
 
       <ul>
         <li>
@@ -582,13 +675,14 @@
           </strong>
           Joint work with Feng Xu, Jian-Qiang Hu, and Jiaqiao Hu.
           <em>Under review</em>.
-                    <a
-  href="NonstaSlides.pdf"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  [Slides, Jun 2026]
-</a>
+
+          <a
+            href="NonstaSlides.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            [Slides, Jun 2026]
+          </a>
         </li>
 
         <li>
@@ -606,7 +700,7 @@
             Strongly-Convex-Strongly-Concave Stochastic Minimax
             Optimization: A New Convergence Rate.
           </strong>
-          Sole author. 
+          Sole author.
           <em>Major revision</em>.
         </li>
 
@@ -617,13 +711,14 @@
           </strong>
           Joint work with Jiaqiao Hu and Jianghua Zhang.
           <em>Under review</em>.
-            <a
-  href="penalty-method-slides-jun-2025.pdf"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  [Slides, Jun 2025]
-</a>
+
+          <a
+            href="penalty-method-slides-jun-2025.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            [Slides, Jun 2025]
+          </a>
         </li>
 
         <li>
@@ -634,9 +729,7 @@
           </strong>
           Joint work with Jianghua Zhang, Hongwei Shi,
           and Zizhuo Wang.
-                    <em>
-            Major revision
-          </em>.
+          <em>Major revision</em>.
 
           <br />
 
@@ -648,10 +741,19 @@
       </ul>
     </section>
 
+
+    <!-- Research Grants -->
+
     <section id="grants">
-      <h2>
-        Research Grants
-        <span class="note">(as Principal Investigator)</span>
+      <h2 class="section-title">
+        <span>
+          Research Grants
+          <span class="note">(as Principal Investigator)</span>
+        </span>
+
+        <span class="section-quote" lang="zh-CN">
+          工欲善其事，必先利其器
+        </span>
       </h2>
 
       <table class="grant-table">
@@ -703,8 +805,16 @@
       </table>
     </section>
 
+
+    <!-- Teaching -->
+
     <section id="teaching">
-      <h2>Teaching</h2>
+      <h2 class="section-title">
+        <span>Teaching</span>
+        <span class="section-quote" lang="zh-CN">
+          随风潜入夜，润物细无声
+        </span>
+      </h2>
 
       <h3>Undergraduate-Level Courses</h3>
 
@@ -732,15 +842,24 @@
           Fall 2022, 2023, 2024, and 2025
         </li>
 
-                <li>
-          Introduction to Machine Learning Theory (机器学习理论导引), 
+        <li>
+          Introduction to Machine Learning Theory
+          (机器学习理论导引),
           Fall 2026
         </li>
       </ul>
     </section>
 
+
+    <!-- Service & Honors -->
+
     <section id="service">
-      <h2>Service &amp; Honors</h2>
+      <h2 class="section-title">
+        <span>Service &amp; Honors</span>
+        <span class="section-quote" lang="zh-CN">
+          浮名浮利，休苦劳神
+        </span>
+      </h2>
 
       <h3>Service</h3>
 
@@ -776,85 +895,96 @@
       </ul>
     </section>
 
-<section id="miscellaneous">
-  <h2>Miscellaneous</h2>
 
-  <ul>
-    <li>
-      Programming &amp; Software:
-      Python, R, MATLAB, LaTeX
-    </li>
+    <!-- Miscellaneous -->
 
-    <li>
-      <a
-        href="https://www.genealogy.math.ndsu.nodak.edu/id.php?id=300496"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Mathematics Genealogy
-      </a>
-    </li>
+    <section id="miscellaneous">
+      <h2 class="section-title">
+        <span>Miscellaneous</span>
+        <span class="section-quote" lang="zh-CN">
+          奇文共欣赏，疑义相与析
+        </span>
+      </h2>
 
-    <li>
-      <a
-        href="https://mathscinet.ams.org/mathscinet/freetools/collab-dist?source=1606261&target=189017"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Erdős Number: 4
-      </a>
-    </li>
-  </ul>
+      <ul>
+        <li>
+          Programming &amp; Software:
+          Python, R, MATLAB, LaTeX
+        </li>
 
-  <h3>Selected Academic Resources</h3>
+        <li>
+          <a
+            href="https://www.genealogy.math.ndsu.nodak.edu/id.php?id=300496"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Mathematics Genealogy
+          </a>
+        </li>
 
-  <ul>
-    <li>
-      <a
-        href="https://book.douban.com/subject/1168904/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        新学者融入世界科坛
-      </a>
-    </li>
+        <li>
+          <a
+            href="https://mathscinet.ams.org/mathscinet/freetools/collab-dist?source=1606261&target=189017"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Erdős Number: 4
+          </a>
+        </li>
+      </ul>
 
-    <!-- <li>
-      <a
-        href="https://www.amazon.com/Elements-Style-Fourth-William-Strunk/dp/020530902X"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        The Elements of Style
-      </a>
-    </li> -->
+      <h3>Selected Academic Resources</h3>
 
-    <li>
-      <a
-        href="https://www.mit.edu/~dimitrib/Ten_Rules.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Ten Simple Rules for Mathematical Writing
-      </a>
-    </li>
+      <ul>
+        <li>
+          <a
+            href="https://book.douban.com/subject/1168904/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            新学者融入世界科坛
+          </a>
+        </li>
 
-    <li>
-      <a
-        href="https://www2.cs.uh.edu/~gnawali/courses/cosc6321-s19/jaspal-talk-talk.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Giving Technical Talks
-      </a>
-    </li>
-  </ul>
-</section>
+        <!--
+        <li>
+          <a
+            href="https://www.amazon.com/Elements-Style-Fourth-William-Strunk/dp/020530902X"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            The Elements of Style
+          </a>
+        </li>
+        -->
+
+        <li>
+          <a
+            href="https://www.mit.edu/~dimitrib/Ten_Rules.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ten Simple Rules for Mathematical Writing
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="https://www2.cs.uh.edu/~gnawali/courses/cosc6321-s19/jaspal-talk-talk.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Giving Technical Talks
+          </a>
+        </li>
+      </ul>
+    </section>
 
 
     <footer class="footer">
       Last updated: Sep 2026
     </footer>
+
   </main>
 </body>
 </html>
