@@ -130,26 +130,32 @@
       Section titles and classical Chinese quotations
     */
     .section-title {
-      display: flex;
-      align-items: baseline;
-      flex-wrap: wrap;
-      gap: 6px 18px;
-    }
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+  gap: 24px;
+}
 
-    .section-quote {
-      font-family:
-        "Kaiti SC",
-        "STKaiti",
-        "KaiTi",
-        "Songti SC",
-        "STSong",
-        serif;
-      font-size: 0.58em;
-      font-weight: 400;
-      color: #666666;
-      letter-spacing: 0.04em;
-      white-space: nowrap;
-    }
+.section-quote {
+  margin-left: auto;
+  font-family:
+    "KaiTi",
+    "STKaiti",
+    "Kaiti SC",
+    "楷体",
+    "Songti SC",
+    serif;
+  font-size: 0.58em;
+  font-weight: 400;
+  font-style: normal;
+  color: #666666;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  text-align: right;
+}
+
+
 
     h3 {
       margin: 24px 0 12px;
@@ -276,15 +282,19 @@
         On smaller screens, put the quotation
         underneath the English section title.
       */
-      .section-title {
-        display: block;
-      }
+     .section-title {
+  display: block;
+}
 
-      .section-quote {
-        display: block;
-        margin-top: 5px;
-        white-space: normal;
-      }
+.section-quote {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  margin-left: 0;
+  white-space: normal;
+  text-align: right;
+}
+
 
       .item-head {
         display: block;
@@ -857,7 +867,7 @@
       <h2 class="section-title">
         <span>Service &amp; Honors</span>
         <span class="section-quote" lang="zh-CN">
-          浮名浮利，休苦劳神
+          浮名浮利，虚苦劳神
         </span>
       </h2>
 
